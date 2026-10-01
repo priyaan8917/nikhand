@@ -1,0 +1,32 @@
+RUN THE ENTIRE PROJECT ON WINDOWS
+
+1. Extract the ZIP first. Do not run files from inside the ZIP.
+2. Open the nik folder containing package.json, angular.json and RUN-NIKHAND.cmd.
+3. Double-click RUN-NIKHAND.cmd.
+4. Wait while dependencies install. Internet is required for the first installation.
+5. The browser opens when Angular starts. Otherwise open http://localhost:4200/.
+6. Keep the command window open. Press Ctrl+C to stop.
+
+MANUAL METHOD IN VS CODE
+File > Open Folder > choose this nik folder.
+Terminal > New Terminal.
+Run each command separately:
+  npm.cmd install
+  npm.cmd start
+Open http://localhost:4200/.
+
+Do not run npm from Desktop. The terminal must show the folder containing package.json.
+Do not create a new Angular project; all required source/configuration files are here.
+Use Node.js 22 for this Angular 18 project. Check using node --version.
+
+WHAT WAS CORRECTED
+Removed the empty, mismatched package-lock.json from the uploaded ZIP. npm install will generate a valid lock file.
+Added a launcher that sets its working directory automatically.
+Preserved the Angular landing component and its complete CSS.
+Kept the HTML preview in nikhand-angular/nikhand-preview.html for viewing without npm.
+
+FORM DELIVERY
+The page runs locally, but the enquiry API is not configured. Set enquiryEndpoint in src/app/landing/landing.component.ts to the real backend route before accepting enquiries.
+
+VALIDATION
+JSON files and local source paths were checked. A full Angular build could not be verified here because dependencies could not be installed in this environment.
